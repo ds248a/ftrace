@@ -34,7 +34,7 @@ func main() {
 		"sched/sched_process_exit",
 	}
 
-	watcher := ftrace.NewProbe("test_probe", "sys_execve", subEvents)
+	watcher := ftrace.NewProbe("name_exec_probe", "sys_execve", subEvents)
 
 	if err := watcher.Reset(); err != nil && watcher.Enabled() {
 		fmt.Printf("ftrace.Reset() error: %v\n", err)
