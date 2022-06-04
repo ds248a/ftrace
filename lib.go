@@ -1,11 +1,11 @@
 package ftrace
 
 import (
+	"bufio"
 	"fmt"
 	"io/ioutil"
 	"os"
 	"strings"
-	"bufio"
 )
 
 // ------------------------
@@ -42,8 +42,6 @@ func asyncFileReader(filename string) (chan string, error) {
 func Available() bool {
 	return trim(readFileOr(enabledStatusFile, "0")) == "1"
 }
-
-
 
 //
 func trim(s string) string {
