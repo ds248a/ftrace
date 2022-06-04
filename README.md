@@ -11,8 +11,6 @@ type Event struct {
 ```
 
 Пример использования
-
-
 ```go
 package main
 
